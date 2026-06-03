@@ -1,0 +1,40 @@
+# Foto Veronika Plívová
+
+## O webu
+Web fotografky Veroniky Plívové z Lovosic. Nabízí profesionální fotografické služby.
+
+## Majitel / provozovatel
+Veronika Plívová
+Terezínská 1111
+Lovosice, Česká republika
+Tel: +420 608 296 398
+E-mail: photoplivova@email.cz
+Facebook: facebook.com/photoplivova
+
+## Nabízené služby
+- Focení dětí
+- Rodinné focení
+- Těhotenské focení
+- Focení párů a dospělých
+- Svatební fotografie (kratší a delší balíček)
+- Produktová fotografie (individuální nacenění)
+- Focení zvířat
+
+## Ceník (platný od 1. 1. 2026)
+- Standardní focení (děti, rodina, páry, těhotenství): 1 900 Kč / 10 fotografií / 60 min.
+- Každá další fotografie navíc: 190 Kč
+- Svatba – kratší balíček: 4 900 Kč / 2 hod. / 70 záběrů
+- Svatba – delší balíček: 9 900 Kč / 8 hod. / 250 záběrů na flash disku
+- Cesta nad 30 km: 8 Kč/km (u svateb)
+- Přesčas u svateb: 800 Kč/hod.
+
+## Stránky webu
+- / — Hlavní stránka s přehledem kategorií a ceníkem
+- /portfolio — Galerie fotografií (děti, rodina, dospělí, svatby, těhotenství, zvířata, produktové)
+- /o-mne — O fotografce, vybavení
+- /cenik — Podrobný ceník
+- /kontakt — Kontaktní informace a formulář
+
+## Technické informace pro LLM
+Tento soubor je určen pro jazykové modely. Web je statický, mobilní a responzivní.
+Kanonická doména: https://domena.cz (bez www).
