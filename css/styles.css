@@ -75,7 +75,10 @@ section { padding: var(--sp-10) 0; }
 .section-subtitle { color: var(--c-muted); font-size: 1.0625rem; }
 .section-alt { background: var(--c-bg-alt); }
 .text-center { text-align: center; }
-.text-center p { margin-inline: auto; }
+.text-center h1,
+.text-center h2,
+.text-center h3,
+.text-center p { text-align: center; margin-inline: auto; }
 
 /* ── Tlačítka ────────────────────────────────────────────── */
 .btn {
