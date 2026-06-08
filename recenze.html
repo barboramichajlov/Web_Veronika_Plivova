@@ -7,13 +7,13 @@
 
   <title>Recenze | Veronika Plívová – Fotografka Lovosice</title>
   <meta name="description" content="Přečtěte si recenze spokojených zákazníků fotografky Veroniky Plívové z Lovosic. Rodinné focení, svatby a&nbsp;portréty.">
-  <link rel="canonical" href="https://domena.cz/recenze">
+  <link rel="canonical" href="https://veronikaplivova.barboramichajlov.cz/recenze">
 
   <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://domena.cz/recenze">
+  <meta property="og:url"         content="https://veronikaplivova.barboramichajlov.cz/recenze">
   <meta property="og:title"       content="Recenze | Veronika Plívová – Fotografka">
   <meta property="og:description" content="Přečtěte si recenze spokojených zákazníků.">
-  <meta property="og:image"       content="https://domena.cz/Obrazky_Plivova/Hlavni/_DSC1881m.webp">
+  <meta property="og:image"       content="https://veronikaplivova.barboramichajlov.cz/Obrazky_Plivova/Hlavni/_DSC1881m.webp">
   <meta property="og:locale"      content="cs_CZ">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -22,6 +22,103 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .rc-section { padding: var(--sp-4) 0 var(--sp-10); }
+    .rc-wrap { max-width: 760px; margin: 0 auto; }
+
+    .rc-avatars {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .rc-av:nth-child(even) { margin-top: 44px; }
+    @keyframes rcFloat {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+    .rc-av {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 50%;
+      line-height: 0;
+      animation: rcFloat 3.2s ease-in-out infinite;
+    }
+    .rc-av:nth-child(2) { animation-delay: .6s; }
+    .rc-av:nth-child(3) { animation-delay: 1.2s; }
+    .rc-av:nth-child(4) { animation-delay: 1.8s; }
+    .rc-av img {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid transparent;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .rc-av.active img {
+      border-color: var(--c-primary);
+      box-shadow: 0 0 0 4px rgba(224,63,90,.18);
+    }
+
+    .rc-main {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .rc-slides {
+      flex: 1;
+      text-align: center;
+      min-height: 140px;
+    }
+    .rc-slide { display: none; animation: rcFade .35s ease; }
+    .rc-slide.active { display: block; }
+    @keyframes rcFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .rc-quote {
+      font-size: 1.05rem;
+      font-style: normal;
+      line-height: 1.8;
+      color: var(--c-text);
+      max-width: none;
+      margin-bottom: 18px;
+    }
+    .rc-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--c-text);
+    }
+
+    .rc-arrow {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid var(--c-border);
+      background: #fff;
+      color: var(--c-muted);
+      font-size: .875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: border-color .2s, color .2s;
+    }
+    .rc-arrow:hover { border-color: var(--c-primary); color: var(--c-primary); }
+
+    .rc-note {
+      text-align: center;
+      font-size: .875rem;
+      color: var(--c-muted);
+      margin-top: 36px;
+      max-width: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -71,81 +168,81 @@
   </section>
 
   <!-- Recenze -->
-  <section aria-labelledby="recenze-h2">
+  <section class="rc-section" aria-labelledby="recenze-h2">
     <div class="container">
       <h2 id="recenze-h2" class="visually-hidden">Recenze zákazníků</h2>
 
-      <div class="reviews-grid">
+      <div class="rc-wrap">
 
-        <article class="review-card reveal">
-          <div class="review-stars" aria-label="Hodnocení 5 z 5 hvězdiček">
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-          </div>
-          <blockquote class="review-text">
-            <p>100% doporučujeme 😊 Paní fotografka nám fotila v&nbsp;srpnu svatbu. Na jaře jsme měli rodinné focení – bylo to rychlé, příjemné a&nbsp;fotky super!! 😍 Děkujeme.</p>
-          </blockquote>
-          <footer class="review-author">
-            <div class="review-avatar" aria-hidden="true">MR</div>
-            <div>
-              <strong>Michaela Rössler</strong>
-              <span class="review-source">
-                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook
-              </span>
-            </div>
-          </footer>
-        </article>
+        <!-- Avatary -->
+        <div class="rc-avatars">
+          <button class="rc-av active" data-idx="0" aria-label="Recenze od Michaela Rössler">
+            <img src="Obrazky_Plivova/Recenze/michalea_rossler.jpg" alt="Michaela Rössler">
+          </button>
+          <button class="rc-av" data-idx="1" aria-label="Recenze od Věra Krajníková">
+            <img src="Obrazky_Plivova/Recenze/veronika_krajnikova.jpg" alt="Věra Krajníková">
+          </button>
+          <button class="rc-av" data-idx="2" aria-label="Recenze od Lucie Šnejdarová">
+            <img src="Obrazky_Plivova/Recenze/Lucie_Snejdarova.jpg" alt="Lucie Šnejdarová">
+          </button>
+          <button class="rc-av" data-idx="3" aria-label="Recenze od Barbora Michajlov">
+            <img src="Obrazky_Plivova/Recenze/barbora_michajlov.jpg" alt="Barbora Michajlov">
+          </button>
+        </div>
 
-        <article class="review-card reveal">
-          <div class="review-stars" aria-label="Hodnocení 5 z 5 hvězdiček">
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-          </div>
-          <blockquote class="review-text">
-            <p>Máme krásné svatební fotky ❤️. Vřele doporučuji.</p>
-          </blockquote>
-          <footer class="review-author">
-            <div class="review-avatar" aria-hidden="true">VK</div>
-            <div>
-              <strong>Věra Krajníková</strong>
-              <span class="review-source">
-                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook
-              </span>
-            </div>
-          </footer>
-        </article>
+        <!-- Šipky + text -->
+        <div class="rc-main">
+          <button class="rc-arrow rc-prev" aria-label="Předchozí recenze"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
 
-        <article class="review-card reveal">
-          <div class="review-stars" aria-label="Hodnocení 5 z 5 hvězdiček">
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-            <i class="fa-solid fa-star" aria-hidden="true"></i>
-          </div>
-          <blockquote class="review-text">
-            <p>Verču mohu jen doporučit, velice šikovná a&nbsp;hlavně nápaditá. Fotila nám svatbu a&nbsp;veliká spokojenost. Určitě bude v&nbsp;brzké době následovat i&nbsp;další focení.</p>
-          </blockquote>
-          <footer class="review-author">
-            <div class="review-avatar" aria-hidden="true">LŠ</div>
-            <div>
-              <strong>Lucinka Šnejdarová</strong>
-              <span class="review-source">
-                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook
-              </span>
+          <div class="rc-slides">
+            <div class="rc-slide active">
+              <p class="rc-quote">„100% doporučujeme 😊 Paní fotografka nám fotila v&nbsp;srpnu svatbu. Na jaře jsme měli rodinné focení – bylo to rychlé, příjemné a&nbsp;fotky super!! 😍 Děkujeme."</p>
+              <strong class="rc-name">Michaela Rössler</strong>
             </div>
-          </footer>
-        </article>
+            <div class="rc-slide">
+              <p class="rc-quote">„Máme krásné svatební fotky ❤️. Vřele doporučuji."</p>
+              <strong class="rc-name">Věra Krajníková</strong>
+            </div>
+            <div class="rc-slide">
+              <p class="rc-quote">„Verču mohu jen doporučit, velice šikovná a&nbsp;hlavně nápaditá. Fotila nám svatbu a&nbsp;veliká spokojenost. Určitě bude v&nbsp;brzké době následovat i&nbsp;další focení."</p>
+              <strong class="rc-name">Lucie Šnejdarová</strong>
+            </div>
+            <div class="rc-slide">
+              <p class="rc-quote">„Verča je v&nbsp;podstatě už taková naše rodinná fotografka. Zachycuje momentky z&nbsp;našeho života už řadu let – od naší svatby, těhotenství až po narození našeho syna. Letos se chystáme už na focení jeho 5.&nbsp;narozenin a&nbsp;vždycky jsme s&nbsp;výsledkem maximálně spokojeni a&nbsp;rádi se vracíme."</p>
+              <strong class="rc-name">Barbora Michajlov</strong>
+            </div>
+          </div>
+
+          <button class="rc-arrow rc-next" aria-label="Další recenze"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+
+        <p class="rc-note">Všechny reference jsou ověřené. Reference sbírám od svých klientek a&nbsp;některé z&nbsp;nich zveřejňuji.</p>
 
       </div>
     </div>
   </section>
+
+  <script>
+    (function () {
+      const slides  = document.querySelectorAll('.rc-slide');
+      const avBtns  = document.querySelectorAll('.rc-av');
+      let current = 0;
+
+      function goTo(idx) {
+        slides[current].classList.remove('active');
+        avBtns[current].classList.remove('active');
+        current = (idx + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        avBtns[current].classList.add('active');
+      }
+
+      document.querySelector('.rc-prev').addEventListener('click', function () { goTo(current - 1); });
+      document.querySelector('.rc-next').addEventListener('click', function () { goTo(current + 1); });
+      avBtns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () { goTo(i); });
+      });
+    })();
+  </script>
 
   <!-- CTA -->
   <section class="cta-section" aria-labelledby="cta-h2">

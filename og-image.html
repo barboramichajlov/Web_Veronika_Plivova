@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>OG Image 1200×630 — Veronika Plívová</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      display: flex;
+      font-family: 'Outfit', 'Century Gothic', 'Gill Sans MT', Futura, sans-serif;
+    }
+
+    .left {
+      width: 510px;
+      height: 630px;
+      background: linear-gradient(155deg, #ffffff 0%, #fdf8f9 40%, #ffeaee 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px 56px;
+      position: relative;
+    }
+    .right {
+      flex: 1;
+      overflow: hidden;
+    }
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    .accent {
+      width: 44px;
+      height: 3px;
+      background: #e03f5a;
+      margin-bottom: 26px;
+    }
+    .pretitle {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #e03f5a;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .name {
+      font-size: 54px;
+      font-weight: 300;
+      color: #2a2a2a;
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+    .name-pink { color: #e03f5a; font-weight: 400; }
+    .city {
+      font-size: 12px;
+      letter-spacing: 3.5px;
+      color: #bbb;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 40px;
+    }
+    .svc {
+      font-size: 13.5px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    .svc::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #e03f5a;
+      flex-shrink: 0;
+    }
+    .url {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      color: #ccc;
+      text-transform: uppercase;
+    }
+    .corner {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      width: 52px;
+      height: 52px;
+      border-right: 2px solid rgba(224, 63, 90, .2);
+      border-bottom: 2px solid rgba(224, 63, 90, .2);
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <div class="accent"></div>
+    <div class="pretitle">Profesionální fotografka</div>
+    <div class="name">Veronika<br><span class="name-pink">Plívová</span></div>
+    <div class="city">Lovosice</div>
+    <div class="services">
+      <div class="svc">Rodinné focení &amp; děti</div>
+      <div class="svc">Těhotenské focení</div>
+      <div class="svc">Svatební fotografie</div>
+      <div class="svc">Zvířata &amp; produkty</div>
+    </div>
+    <div class="url">veronikaplivova.barboramichajlov.cz</div>
+    <div class="corner"></div>
+  </div>
+  <div class="right">
+    <img src="Obrazky_Plivova/Hlavni/DSC_3372.webp" alt="Veronika Plívová fotografka">
+  </div>
+</body>
+</html>
