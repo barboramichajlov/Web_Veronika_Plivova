@@ -92,6 +92,8 @@ qsa('.reveal').forEach(el => revealObs.observe(el));
   const galleryItems = qsa('.gallery-item');
   if (!filterBtns.length) return;
 
+  const vanoceInfo = qs('#vanoce-info');
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -101,6 +103,7 @@ qsa('.reveal').forEach(el => revealObs.observe(el));
         const show = filter === 'vse' || item.dataset.category === filter;
         item.classList.toggle('hidden', !show);
       });
+      if (vanoceInfo) vanoceInfo.style.display = filter === 'vanoce' ? 'block' : 'none';
     });
   });
 

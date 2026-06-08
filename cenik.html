@@ -69,7 +69,7 @@
   }
   </script>
 </head>
-<body style="background: linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)), url('Obrazky_Plivova/Rodina_Plivova/DSC_2363-2.webp') center 30% / cover fixed;">
+<body style="background: linear-gradient(rgba(255,255,255,.60), rgba(255,255,255,.60)), url('Obrazky_Plivova/Rodina_Plivova/DSC_2363-2.webp') center 30% / cover fixed;">
 
 <!-- Navigace -->
 <header>
@@ -124,9 +124,9 @@
         <p class="section-subtitle">Ateliér nebo exteriér dle vašeho přání</p>
       </div>
 
-      <div class="pricing-grid pricing-grid--flex" style="display:flex;flex-wrap:wrap;justify-content:center;">
+      <div class="pricing-grid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:var(--sp-3);">
 
-        <div class="pricing-card reveal">
+        <div class="pricing-card reveal" style="grid-column:span 2">
           <span class="pricing-badge">Děti, rodina, páry, těhotenství</span>
           <div class="pricing-name">Standardní focení</div>
           <div class="pricing-price">1&nbsp;900 <span class="cur">Kč</span></div>
@@ -142,7 +142,7 @@
           </ul>
         </div>
 
-        <div class="pricing-card reveal">
+        <div class="pricing-card reveal" style="grid-column:span 2">
           <span class="pricing-badge">Svatby – kratší balíček</span>
           <div class="pricing-name">Svatební focení</div>
           <div class="pricing-price">4&nbsp;900 <span class="cur">Kč</span></div>
@@ -161,7 +161,7 @@
           </ul>
         </div>
 
-        <div class="pricing-card featured reveal">
+        <div class="pricing-card featured reveal" style="grid-column:span 2">
           <span class="pricing-badge">Svatby – delší balíček</span>
           <div class="pricing-name">Svatební focení – celý den</div>
           <div class="pricing-price">9&nbsp;900 <span class="cur">Kč</span></div>
@@ -181,7 +181,7 @@
           </ul>
         </div>
 
-        <div class="pricing-card reveal">
+        <div class="pricing-card reveal" style="grid-column:2/span 2">
           <span class="pricing-badge">Vánoce</span>
           <div class="pricing-name">Vánoční focení</div>
           <div class="pricing-price">1&nbsp;700 <span class="cur">Kč</span></div>
@@ -200,9 +200,12 @@
             <li><i class="fa-solid fa-ban" aria-hidden="true"></i>
               <span>Na vánoční focení <strong>nelze uplatnit</strong> zakoupený dárkový poukaz</span></li>
           </ul>
+          <a href="/vanoce" class="btn btn-ghost" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:var(--sp-4);font-size:.875rem;">
+            Více info k&nbsp;vánočnímu focení <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
         </div>
 
-        <div class="pricing-card reveal">
+        <div class="pricing-card reveal" style="grid-column:span 2">
           <span class="pricing-badge">Komerční focení</span>
           <div class="pricing-name">Produktové fotografie</div>
           <div class="pricing-price" style="font-size:1.5rem;margin:var(--sp-2) 0">
