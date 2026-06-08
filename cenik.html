@@ -43,8 +43,14 @@
     "offers": [
       {
         "@type": "Offer",
-        "name": "Focení dětí, rodiny, párů a&nbsp;těhotenství",
+        "name": "Focení dětí, rodiny, párů a těhotenství",
         "price": "1900",
+        "priceCurrency": "CZK"
+      },
+      {
+        "@type": "Offer",
+        "name": "Vánoční focení",
+        "price": "1700",
         "priceCurrency": "CZK"
       },
       {
@@ -63,7 +69,7 @@
   }
   </script>
 </head>
-<body>
+<body style="background: linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)), url('Obrazky_Plivova/Rodina_Plivova/DSC_2363-2.webp') center 30% / cover fixed;">
 
 <!-- Navigace -->
 <header>
@@ -102,7 +108,7 @@
 <main>
 
   <!-- Záhlaví stránky -->
-  <section class="page-hero">
+  <section class="page-hero" style="background: transparent;">
     <div class="container">
       <span class="page-hero-eyebrow">Transparentní ceny</span>
       <h1>Ceník</h1>
@@ -110,15 +116,16 @@
     </div>
   </section>
 
-  <!-- Standardní focení -->
+  <!-- Standardní + Svatební focení -->
   <section aria-labelledby="standard-h2">
     <div class="container">
       <div class="section-header reveal">
-        <h2 id="standard-h2">Focení dětí, těhotenské focení, páry, rodinné</h2>
+        <h2 id="standard-h2">Ceník focení</h2>
         <p class="section-subtitle">Ateliér nebo exteriér dle vašeho přání</p>
       </div>
 
-      <div style="max-width:600px">
+      <div class="pricing-grid" style="grid-template-columns:repeat(3,1fr)">
+
         <div class="pricing-card reveal">
           <span class="pricing-badge">Děti, rodina, páry, těhotenství</span>
           <div class="pricing-name">Standardní focení</div>
@@ -134,22 +141,9 @@
               Každá další fotografie vybraná navíc je za 190&nbsp;Kč</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Svatební focení -->
-  <section class="section-alt" aria-labelledby="svatba-h2">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 id="svatba-h2">Svatební focení</h2>
-        <p class="section-subtitle">Vyberte balíček, který vám nejlépe vyhovuje</p>
-      </div>
-
-      <div class="pricing-grid">
 
         <div class="pricing-card reveal">
-          <span class="pricing-badge">Kratší balíček</span>
+          <span class="pricing-badge">Svatby – kratší balíček</span>
           <div class="pricing-name">Svatební focení</div>
           <div class="pricing-price">4&nbsp;900 <span class="cur">Kč</span></div>
           <p class="pricing-desc">Ideální pro kratší, intimní obřady.</p>
@@ -168,7 +162,7 @@
         </div>
 
         <div class="pricing-card featured reveal">
-          <span class="pricing-badge">Delší balíček</span>
+          <span class="pricing-badge">Svatby – delší balíček</span>
           <div class="pricing-name">Svatební focení – celý den</div>
           <div class="pricing-price">9&nbsp;900 <span class="cur">Kč</span></div>
           <p class="pricing-desc">Komplexní zachycení celého svatebního dne.</p>
@@ -187,18 +181,27 @@
           </ul>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <div class="pricing-card reveal">
+          <span class="pricing-badge">Vánoce</span>
+          <div class="pricing-name">Vánoční focení</div>
+          <div class="pricing-price">1&nbsp;700 <span class="cur">Kč</span></div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>
+              5 fotografií v&nbsp;el.&nbsp;podobě v&nbsp;plné velikosti</li>
+            <li><i class="fa-solid fa-circle-plus" aria-hidden="true"></i>
+              Každý další záběr navíc: 280&nbsp;Kč (částku nad rámec balíčku prosím převodem na&nbsp;účet)</li>
+            <li><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+              Základní částka 1&nbsp;700&nbsp;Kč je splatná na&nbsp;místě – ideálně přesná hotovost</li>
+            <li><i class="fa-solid fa-image" aria-hidden="true"></i>
+              Fotografie zasílám až po&nbsp;uhrazení celé částky</li>
+            <li><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              Plánujete větší rodinné focení nebo potřebujete více času? Napište mi prosím předem,
+              nechám si na&nbsp;vás větší časový prostor.</li>
+            <li><i class="fa-solid fa-ban" aria-hidden="true"></i>
+              Na vánoční focení <strong>nelze uplatnit</strong> zakoupený dárkový poukaz</li>
+          </ul>
+        </div>
 
-  <!-- Produktová fotografie -->
-  <section aria-labelledby="produkty-h2">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2 id="produkty-h2">Produktová fotografie</h2>
-      </div>
-
-      <div style="max-width:600px">
         <div class="pricing-card reveal">
           <span class="pricing-badge">Komerční focení</span>
           <div class="pricing-name">Produktové fotografie</div>
@@ -215,19 +218,20 @@
             </a>
           </div>
         </div>
+
       </div>
 
-      <div class="pricing-note reveal" style="max-width:600px;margin-top:var(--sp-5)">
-        <strong>Ukázky produktových fotografií</strong> najdete v&nbsp;
-        <a href="/portfolio#produktove" style="color:var(--c-primary);font-weight:600">portfoliu</a>.
-      </div>
     </div>
   </section>
 
   <!-- Platba -->
   <section>
     <div class="container">
-      <div class="pricing-note reveal" style="max-width:600px;font-size:1.1rem;padding:var(--sp-4) var(--sp-5);border-left:3px solid var(--c-primary);">
+      <div class="pricing-note reveal" style="max-width:600px;font-size:1.1rem;margin-bottom:var(--sp-4);background:rgba(255,255,255,.88);">
+        <strong>Ukázky produktových fotografií</strong> najdete v&nbsp;
+        <a href="/portfolio#produktove" style="color:var(--c-primary);font-weight:600">portfoliu</a>.
+      </div>
+      <div class="pricing-note reveal" style="max-width:600px;font-size:1.1rem;padding:var(--sp-4) var(--sp-5);border-left:3px solid var(--c-primary);background:rgba(255,255,255,.88);">
         <i class="fa-solid fa-credit-card" style="color:var(--c-primary);margin-right:10px;" aria-hidden="true"></i>
         <strong>Možnosti platby:</strong> Focení je splatné v&nbsp;den focení v&nbsp;plné výši, a&nbsp;to hotově nebo převodem na účet.<br><br>
         V&nbsp;případě výběru snímků nad rámec balíčků se nedoplatek hradí převodem na účet, kdy se hotové fotografie zasílají po obdržení platby.
@@ -256,8 +260,29 @@
         <img src="Obrazky_Plivova/Logo_Plivova.svg" alt="Logo Veronika Plívová" class="footer-logo">
         <p>Profesionální fotografka z&nbsp;Lovosic. Ateliér i&nbsp;exteriér kdekoli dle vašeho přání.</p>
         <img src="Obrazky_Plivova/Omne_Plivova/DSC_3257mala.webp" alt="Veronika Plívová" class="footer-portrait" loading="lazy">
+        <div class="footer-social">
+          <a href="https://facebook.com/photoplivova" class="footer-social-icon"
+             aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/photo_plivova/" class="footer-social-icon"
+             aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-heading">Kontakt</h3>
+        <address class="footer-links">
+          <span class="footer-link"><i class="fa-solid fa-user footer-contact-icon" aria-hidden="true"></i>Veronika Plívová</span>
 
-
+          <a href="https://maps.app.goo.gl/MpopxitPX6aHcJAa8" class="footer-link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot footer-contact-icon" aria-hidden="true"></i>Adresa&nbsp;ateliéru:&nbsp;Terezínská 1111, Lovosice</a>
+          <span class="footer-link" style="font-size:.8em;opacity:.6;"><i class="fa-solid fa-building footer-contact-icon" aria-hidden="true"></i>Sídlo: 410&nbsp;02, Lukavec&nbsp;7</span>
+          <a href="tel:+420608296398" class="footer-link"><i class="fa-solid fa-phone footer-contact-icon" aria-hidden="true"></i>+420&nbsp;608&nbsp;296&nbsp;398</a>
+          <a href="mailto:photoplivova@email.cz" class="footer-link"><i class="fa-solid fa-envelope footer-contact-icon" aria-hidden="true"></i>photoplivova@email.cz</a>
+          <span class="footer-link"><i class="fa-solid fa-hashtag footer-contact-icon" aria-hidden="true"></i>IČO: 76415147</span>
+          <span class="footer-link" style="font-size:.8em;opacity:.6;">Fyzická osoba zapsaná v&nbsp;živnostenském rejstříku</span>
+        </address>
       </div>
       <div>
         <h3 class="footer-heading">Navigace</h3>
@@ -270,35 +295,15 @@
           <a href="/kontakt"   class="footer-link">Kontakt</a>
         </nav>
       </div>
-      <div>
-        <h3 class="footer-heading">Kontakt</h3>
-        <address class="footer-links">
-          <span class="footer-link"><i class="fa-solid fa-user footer-contact-icon" aria-hidden="true"></i>Veronika Plívová</span>
-          <a href="https://maps.app.goo.gl/MpopxitPX6aHcJAa8" class="footer-link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot footer-contact-icon" aria-hidden="true"></i>Adresa&nbsp;ateliéru:&nbsp;Terezínská 1111, Lovosice</a>
-          <span class="footer-link" style="font-size:.8em;opacity:.6;"><i class="fa-solid fa-building footer-contact-icon" aria-hidden="true"></i>Sídlo: 410&nbsp;02, Lukavec&nbsp;7</span>
-          <a href="tel:+420608296398" class="footer-link"><i class="fa-solid fa-phone footer-contact-icon" aria-hidden="true"></i>+420&nbsp;608&nbsp;296&nbsp;398</a>
-          <a href="mailto:photoplivova@email.cz" class="footer-link"><i class="fa-solid fa-envelope footer-contact-icon" aria-hidden="true"></i>photoplivova@email.cz</a>
-          <span class="footer-link"><i class="fa-solid fa-hashtag footer-contact-icon" aria-hidden="true"></i>IČO: 76415147</span>
-
-        </address>
-        <div class="footer-social">
-          <a href="https://facebook.com/photoplivova" class="footer-social-icon"
-             aria-label="Facebook" rel="noopener noreferrer" target="_blank">
-            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/photo_plivova/" class="footer-social-icon"
-             aria-label="Instagram" rel="noopener noreferrer" target="_blank">
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
     </div>
     <hr class="footer-divider">
     <div class="footer-bottom">
       <p>&copy; 2026 Veronika Plívová. Všechna práva vyhrazena.</p>
+
       <div class="footer-legal">
         <a href="/adr"     class="footer-link">Mimosoudní řešení sporů</a>
         <a href="/cookies" class="footer-link">Zásady cookies</a>
+        <a href="/vop"     class="footer-link">Obchodní podmínky</a>
       </div>
     </div>
   </div>

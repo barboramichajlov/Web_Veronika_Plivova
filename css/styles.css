@@ -495,7 +495,20 @@ section { padding: var(--sp-10) 0; }
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .4s var(--ease);
+  z-index: 2;
 }
+.pricing-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-bg-img, none);
+  background-size: cover;
+  background-position: center;
+  opacity: .10;
+  z-index: 0;
+  pointer-events: none;
+}
+.pricing-card > * { position: relative; z-index: 1; }
 .pricing-card:hover { box-shadow: var(--shadow-m); border-color: var(--c-secondary); transform: translateY(-2px); }
 .pricing-card:hover::before { transform: scaleX(1); }
 .pricing-card.featured { border-color: var(--c-border); background: var(--c-bg); }
@@ -538,6 +551,7 @@ section { padding: var(--sp-10) 0; }
   line-height: 1.55;
   color: var(--c-text);
   align-items: flex-start;
+  text-align: left;
 }
 .pricing-features li i { color: var(--c-primary); flex-shrink: 0; margin-top: 3px; font-size: .875rem; }
 .pricing-note {
@@ -787,8 +801,9 @@ address.footer-links .footer-link { display: flex; align-items: center; }
   color: rgba(255,255,255,.35);
   text-align: center;
 }
-.footer-legal { display: flex; gap: var(--sp-3); flex-wrap: wrap; }
+.footer-legal { display: flex; gap: var(--sp-3); flex-wrap: wrap; justify-content: center; }
 .footer-legal span { color: rgba(255,255,255,.35); }
+.footer-legal .footer-link { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ── Cookie lišta ────────────────────────────────────────── */
 .cookie-banner {
@@ -943,7 +958,7 @@ address.footer-links .footer-link { display: flex; align-items: center; }
    ════════════════════════════════════════════════════════════ */
 @media (min-width: 640px) {
   .gallery-grid { columns: 2; }
-  .bento-grid { grid-template-columns: repeat(3, minmax(0, 380px)); justify-content: center; }
+  .bento-grid { grid-template-columns: repeat(2, minmax(0, 380px)); justify-content: center; }
   .bento-item { aspect-ratio: 4/5; }
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
   .photo-strip { grid-template-columns: repeat(3, 1fr); }
@@ -972,21 +987,19 @@ address.footer-links .footer-link { display: flex; align-items: center; }
   .nav-links-left { justify-content: flex-end; align-items: center; }
   .nav-links-right { justify-content: flex-start; align-items: center; }
 
-  /* Bento — symetrická mřížka 3×3 */
+  /* Bento — mřížka 4×2 */
   .bento-grid {
-    grid-template-columns: repeat(3, minmax(0, 380px));
+    grid-template-columns: repeat(4, minmax(0, 300px));
     justify-content: center;
     gap: var(--sp-2);
   }
   .bento-item { aspect-ratio: 4/5; }
-  /* 7. dlaždice sama v řádku → vycentrovat */
-  .bento-item:last-child:nth-child(3n+1) { grid-column: 2; }
 
   /* Galerie */
   .gallery-grid { columns: 3; }
 
   /* Ceník */
-  .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+  .pricing-grid { grid-template-columns: repeat(4, 1fr); }
 
   /* O mně */
   .about-layout { grid-template-columns: 1fr 1fr; }
@@ -999,8 +1012,11 @@ address.footer-links .footer-link { display: flex; align-items: center; }
   .contact-layout { grid-template-columns: 1fr 1fr; }
 
   /* Patička */
-  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
-  .footer-bottom { flex-direction: row; justify-content: center; }
+  .footer-grid { display: flex; align-items: flex-start; gap: var(--sp-6); }
+  .footer-brand { flex: 1.5; max-width: 42%; }
+  .footer-grid > div:nth-child(2) { flex: 1; max-width: 28%; }
+  .footer-grid > div:last-child { flex: 0 0 auto; margin-left: var(--sp-10); }
+  .footer-bottom { flex-direction: column; align-items: center; }
 
   /* Cookie */
   .cookie-banner { left: var(--sp-8); right: auto; max-width: 500px; }
