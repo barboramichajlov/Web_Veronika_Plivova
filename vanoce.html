@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Vánoční focení | Veronika Plívová – Lovosice</title>
+  <meta name="description" content="Vše, co potřebujete vědět o vánočním focení u Veroniky Plívové – místo, čas, cena, platba a důležité informace.">
+  <link rel="canonical" href="https://veronikaplivova.barboramichajlov.cz/vanoce">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://veronikaplivova.barboramichajlov.cz/vanoce">
+  <meta property="og:title"       content="Vánoční focení | Veronika Plívová">
+  <meta property="og:description" content="Vše, co potřebujete vědět o vánočním focení – místo, čas, cena a důležité informace.">
+  <meta property="og:image"       content="https://veronikaplivova.barboramichajlov.cz/Obrazky_Plivova/Vanoce/mala3-96.webp">
+  <meta property="og:locale"      content="cs_CZ">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Navigace -->
+<header>
+  <nav class="site-nav nav-hero" id="site-nav" aria-label="Hlavní navigace">
+    <div class="nav-inner">
+      <div class="nav-links-left">
+        <a href="/portfolio" class="nav-link">Portfolio</a>
+        <a href="/cenik"     class="nav-link">Ceník</a>
+        <a href="/faq"       class="nav-link">FAQ</a>
+      </div>
+      <a href="/" class="nav-logo" aria-label="Domů – Foto Veronika Plívová">
+        <img src="Obrazky_Plivova/Logo_Plivova.svg" alt="Logo Veronika Plívová">
+      </a>
+      <div class="nav-links-right">
+        <a href="/recenze" class="nav-link">Recenze</a>
+        <a href="/o-mne"   class="nav-link">O&nbsp;mně</a>
+        <a href="/kontakt" class="nav-link">Kontakt</a>
+      </div>
+      <div class="nav-spacer" aria-hidden="true"></div>
+      <button class="nav-hamburger" id="nav-hamburger"
+              aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile-menu" id="nav-mobile-menu" role="dialog" aria-label="Mobilní navigace">
+    <a href="/portfolio" class="nav-mobile-link">Portfolio</a>
+    <a href="/cenik"     class="nav-mobile-link">Ceník</a>
+    <a href="/faq"       class="nav-mobile-link">FAQ</a>
+    <a href="/recenze"   class="nav-mobile-link">Recenze</a>
+    <a href="/o-mne"     class="nav-mobile-link">O&nbsp;mně</a>
+    <a href="/kontakt"   class="nav-mobile-link">Kontakt</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Timeline -->
+  <style>
+    .vt-section {
+      position: relative;
+      padding: 7rem 0 4rem;
+      background: url('Obrazky_Plivova/Vanoce/mala3-96.webp') top center / cover;
+    }
+    .vt-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.28);
+      pointer-events: none;
+    }
+    .vt-heading {
+      position: relative;
+      text-align: center;
+      margin-bottom: 3.5rem;
+      z-index: 1;
+    }
+    .vt-wrap {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* SVG path line sits inside .vt-section absolutely */
+    #vt-path-svg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+    }
+    .vt-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      z-index: 1;
+    }
+    /* Odd → card on left */
+    .vt-item:nth-child(odd) {
+      justify-content: flex-end;
+      padding-right: calc(50% + 7rem);
+      flex-direction: row;
+    }
+    /* Even → card on right */
+    .vt-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-left: calc(50% + 7rem);
+      flex-direction: row;
+    }
+    /* Hotspot dot */
+    .vt-dot {
+      position: absolute;
+      left: 50%;
+      top: 12px;
+      transform: translateX(-50%);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #d0b68e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.13);
+      z-index: 2;
+      color: #d0b68e;
+      font-size: 1.2rem;
+      cursor: default;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .vt-dot:hover {
+      transform: translateX(-50%) scale(1.12);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.20);
+    }
+    /* Info card */
+    .vt-card {
+      background: rgba(255,255,255,0.97);
+      border-radius: 14px;
+      padding: 1.1rem 1.4rem;
+      max-width: 360px;
+      box-shadow: 0 3px 18px rgba(0,0,0,0.10);
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+    .vt-card strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #222;
+    }
+    .vt-card p { margin: 0; color: #555; }
+    /* Levitation animation */
+    @keyframes vt-float {
+      0%, 100% { transform: translateY(0);   box-shadow: 0 3px 18px rgba(0,0,0,0.10); }
+      50%       { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,0.14); }
+    }
+    .vt-item:nth-child(1)  .vt-card { animation: vt-float 3.4s ease-in-out infinite 0.0s; }
+    .vt-item:nth-child(2)  .vt-card { animation: vt-float 3.6s ease-in-out infinite 0.4s; }
+    .vt-item:nth-child(3)  .vt-card { animation: vt-float 3.2s ease-in-out infinite 0.8s; }
+    .vt-item:nth-child(4)  .vt-card { animation: vt-float 3.5s ease-in-out infinite 1.2s; }
+    .vt-item:nth-child(5)  .vt-card { animation: vt-float 3.3s ease-in-out infinite 0.2s; }
+    .vt-item:nth-child(6)  .vt-card { animation: vt-float 3.7s ease-in-out infinite 0.6s; }
+    .vt-item:nth-child(7)  .vt-card { animation: vt-float 3.1s ease-in-out infinite 1.0s; }
+    .vt-item:nth-child(8)  .vt-card { animation: vt-float 3.4s ease-in-out infinite 1.4s; }
+    .vt-item:nth-child(9)  .vt-card { animation: vt-float 3.6s ease-in-out infinite 0.3s; }
+    .vt-item:nth-child(10) .vt-card { animation: vt-float 3.2s ease-in-out infinite 0.7s; }
+
+    /* Dot levitation — offset timing from cards so they feel independent */
+    @keyframes vt-float-dot {
+      0%, 100% { transform: translateX(-50%) translateY(0);    box-shadow: 0 3px 14px rgba(0,0,0,0.13); }
+      50%       { transform: translateX(-50%) translateY(-7px); box-shadow: 0 10px 20px rgba(0,0,0,0.18); }
+    }
+    .vt-item:nth-child(1)  .vt-dot { animation: vt-float-dot 3.1s ease-in-out infinite 0.5s; }
+    .vt-item:nth-child(2)  .vt-dot { animation: vt-float-dot 3.5s ease-in-out infinite 0.9s; }
+    .vt-item:nth-child(3)  .vt-dot { animation: vt-float-dot 3.3s ease-in-out infinite 0.1s; }
+    .vt-item:nth-child(4)  .vt-dot { animation: vt-float-dot 3.6s ease-in-out infinite 0.6s; }
+    .vt-item:nth-child(5)  .vt-dot { animation: vt-float-dot 3.2s ease-in-out infinite 1.1s; }
+    .vt-item:nth-child(6)  .vt-dot { animation: vt-float-dot 3.4s ease-in-out infinite 0.3s; }
+    .vt-item:nth-child(7)  .vt-dot { animation: vt-float-dot 3.0s ease-in-out infinite 0.8s; }
+    .vt-item:nth-child(8)  .vt-dot { animation: vt-float-dot 3.7s ease-in-out infinite 0.2s; }
+    .vt-item:nth-child(9)  .vt-dot { animation: vt-float-dot 3.3s ease-in-out infinite 1.3s; }
+    .vt-item:nth-child(10) .vt-dot { animation: vt-float-dot 3.5s ease-in-out infinite 0.4s; }
+
+    /* Explicit left/right for items after cluster divs shift nth-child counts */
+    .vt-item--left {
+      justify-content: flex-end !important;
+      padding-right: calc(50% + 7rem) !important;
+      padding-left: 0 !important;
+      flex-direction: row !important;
+    }
+    .vt-item--right {
+      justify-content: flex-start !important;
+      padding-left: calc(50% + 7rem) !important;
+      padding-right: 0 !important;
+      flex-direction: row !important;
+    }
+    /* Animations for items 11 (child 11) and 12 (child 12, clusters moved inside items) */
+    .vt-item:nth-child(11) .vt-card { animation: vt-float 3.5s ease-in-out infinite 0.9s; }
+    .vt-item:nth-child(12) .vt-card { animation: vt-float 3.3s ease-in-out infinite 0.3s; }
+    .vt-item:nth-child(11) .vt-dot  { animation: vt-float-dot 3.4s ease-in-out infinite 0.5s; }
+    .vt-item:nth-child(12) .vt-dot  { animation: vt-float-dot 3.1s ease-in-out infinite 1.2s; }
+
+    /* Floating image clusters — absolutely positioned inside their vt-item */
+    .vt-img-cluster {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-content: flex-start;
+      z-index: 1;
+      padding: 0;
+    }
+    /* Odd items (card left) → images right of center */
+    .vt-item:nth-child(odd) .vt-img-cluster {
+      left: calc(50% + 2.2rem);
+      right: 0;
+      justify-content: flex-start;
+    }
+    /* Even items (card right) → images left of center */
+    .vt-item:nth-child(even) .vt-img-cluster {
+      right: calc(50% + 2.2rem);
+      left: 0;
+      justify-content: flex-end;
+    }
+    /* Items with a cluster need enough height for the images */
+    .vt-item:has(.vt-img-cluster) {
+      min-height: 130px;
+      margin-bottom: 4rem;
+    }
+    .vt-img-cluster-more {
+      display: none;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: inherit;
+      width: 100%;
+    }
+    .vt-img-float {
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.14);
+      width: 75px;
+      height: 75px;
+      flex-shrink: 0;
+      animation: vt-float-img 3.8s ease-in-out infinite;
+    }
+    .vt-img-float img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @keyframes vt-float-img {
+      0%, 100% {
+        transform: translateY(0) rotate(var(--rot, 0deg));
+        box-shadow: 0 5px 16px rgba(0,0,0,0.14);
+      }
+      50% {
+        transform: translateY(-8px) rotate(var(--rot, 0deg));
+        box-shadow: 0 13px 26px rgba(0,0,0,0.19);
+      }
+    }
+    .vt-cluster-btn-wrap {
+      width: 100%;
+      padding-top: 0.6rem;
+    }
+    .vt-item:nth-child(odd)  .vt-cluster-btn-wrap { text-align: left; }
+    .vt-item:nth-child(even) .vt-cluster-btn-wrap { text-align: right; }
+    .vt-cluster-btn {
+      background: rgba(255,255,255,0.9);
+      border: 1.5px solid #d0b68e;
+      color: #d0b68e;
+      border-radius: 40px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+    .vt-cluster-btn:hover {
+      background: #d0b68e;
+      color: #fff;
+    }
+    /* Inspirace section — images as transparent wrapper on desktop */
+    .inspirace-imgs { display: contents; }
+
+    @media (max-width: 640px) {
+      .inspirace-layout {
+        padding: 1.5rem 1rem 2rem !important;
+        min-height: auto !important;
+      }
+      .inspirace-imgs {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+      .inspirace-layout .vt-img-float {
+        position: static !important;
+        width: 68px !important;
+        height: 68px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .vt-wrap::before { left: 43px; }
+      .vt-item,
+      .vt-item:nth-child(odd),
+      .vt-item:nth-child(even) {
+        flex-direction: column !important;
+        padding: 0 0 0 5.5rem !important;
+        justify-content: flex-start !important;
+      }
+      .vt-item--left,
+      .vt-item--right {
+        flex-direction: column !important;
+        padding: 0 0 0 5.5rem !important;
+        justify-content: flex-start !important;
+      }
+      .vt-dot { left: 1rem; transform: none; }
+      .vt-dot:hover { transform: scale(1.12); }
+      .vt-card { max-width: 100%; width: 100%; }
+      .mob-hide { display: none; }
+      /* On mobile clusters flow below the card */
+      .vt-item:nth-child(odd)  .vt-img-cluster,
+      .vt-item:nth-child(even) .vt-img-cluster {
+        position: static;
+        margin-top: 0.8rem;
+        justify-content: flex-start;
+      }
+      .vt-img-float { width: 62px; height: 62px; }
+    }
+  </style>
+
+  <section class="vt-section" aria-labelledby="vanoce-h1">
+    <svg id="vt-path-svg" aria-hidden="true">
+      <path id="vt-path-line" stroke="#d0b68e" stroke-width="1.5" fill="none"/>
+    </svg>
+
+    <div style="position:relative;z-index:1;text-align:center;padding-bottom:3rem;">
+      <span style="display:inline-block;font-size:0.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#222;margin-bottom:.5rem;">Sváteční atmosféra</span>
+      <h1 id="vanoce-h1" style="margin:0 0 .5rem;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,0.35);">Vánoční focení</h1>
+      <p style="margin:0 auto;color:rgba(255,255,255,0.9);font-size:1.05rem;text-shadow:0 1px 6px rgba(0,0,0,0.3);text-align:center;">Vše, co potřebujete před focením vědět.</p>
+    </div>
+
+    <div class="vt-wrap">
+
+      <!-- 1 Místo (left) -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-tree"></i></div>
+        <div class="vt-card">
+          <strong>Místo focení</strong>
+          <p>Ateliér v&nbsp;Lovosicích, Terezínská 1111, 1.&nbsp;patro nad cukrářskými potřebami Lilie.</p>
+        </div>
+      </div>
+
+      <!-- 2 Dochvilnost (right) -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-bell"></i></div>
+        <div class="vt-card">
+          <strong>Dochvilnost</strong>
+          <p>Max. 5&nbsp;min předem. Pozdní příchod = kratší focení.<span class="mob-hide"> Celé focení trvá 30&nbsp;min + 5&nbsp;min na převlečení.</span></p>
+        </div>
+      </div>
+
+      <!-- 3 Zdraví (left) -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-snowflake"></i></div>
+        <div class="vt-card">
+          <strong>Zdraví</strong>
+          <p>Na focení choďte prosím zdraví.<span class="mob-hide"> Chráníme se tak navzájem – nemocné děti navíc špatně spolupracují.</span></p>
+        </div>
+      </div>
+
+      <!-- 4 Dodání (right) -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-gift"></i></div>
+        <div class="vt-card">
+          <strong>Dodání fotografií</strong>
+          <p>Náhledy do 5&nbsp;dní.<span class="mob-hide"> Po vašem výběru záběrů posílám upravené fotky v&nbsp;plném rozlišení na e-mail do dalších 10&nbsp;dní.</span></p>
+        </div>
+      </div>
+
+      <!-- 5 Cena (left) -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
+        <div class="vt-card">
+          <strong>Cena a&nbsp;platba</strong>
+          <p>1&nbsp;700&nbsp;Kč / 5&nbsp;záběrů, každý další 280&nbsp;Kč převodem. Základní částka hotově na místě.<span class="mob-hide"> Dárkový poukaz nelze uplatnit.</span></p>
+        </div>
+      </div>
+
+      <!-- 6 Děti -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-candy-cane"></i></div>
+        <div class="vt-card">
+          <strong>Chování dětí v&nbsp;ateliéru</strong>
+          <p>Ateliér není hřiště. Nenechte děti běhat, skákat po gauči ani sahat na techniku.</p>
+        </div>
+      </div>
+
+      <!-- 7 Zpětná vazba -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-camera"></i></div>
+        <div class="vt-card">
+          <strong>Zpětná vazba</strong>
+          <p>Průběžně vám ukazuji výsledky. Vlasy, postoj, úsměv – během focení lze vše změnit, po focení už ne.</p>
+        </div>
+      </div>
+
+      <!-- 8 Zrušení -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-sleigh"></i></div>
+        <div class="vt-card">
+          <strong>Zrušení termínu</strong>
+          <p>Pokud zjistíte, že nemůžete přijít, dejte mi vědět co nejdříve.</p>
+        </div>
+      </div>
+
+      <!-- 9 Tetovačky -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="vt-card">
+          <strong>Tetovačky a&nbsp;malůvky</strong>
+          <p>Zajistěte, aby děti neměly nalepené nebo špatně smyté tetovačky a&nbsp;malůvky – neretušuji je.</p>
+        </div>
+      </div>
+
+      <!-- 10 Oblečení -->
+      <div class="vt-item">
+        <div class="vt-dot" aria-hidden="true"><i class="fa-solid fa-holly-berry"></i></div>
+        <div class="vt-card">
+          <strong>Zlaté a&nbsp;zemité barvy</strong>
+          <p>Béžová, krémová, olivová, vínová nebo zlatá.<span class="mob-hide"> Bílá či černá také nevadí.</span> Vyhněte se křiklavým barvám a&nbsp;výrazným nápisům.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Inspirace oblečením -->
+  <section aria-label="Inspirace oblečením">
+    <div class="container">
+
+      <h2 style="text-align:center;margin-bottom:var(--sp-4);">Inspirace oblečením</h2>
+
+      <div class="inspirace-layout" style="position:relative;max-width:1060px;margin:0 auto var(--sp-6);padding:1.5rem 175px 2.5rem;min-height:300px;">
+
+        <!-- Text -->
+        <div style="text-align:center;">
+          <h3 style="font-size:1.1rem;margin-bottom:var(--sp-3);">Zlatá a&nbsp;zemité barvy – ideální volba k&nbsp;vánočním světýlkům</h3>
+          <p style="text-wrap:balance;max-width:100%;margin:0 auto;text-align:center;">Pro vánoční focení doporučuji ladit oblečení do jemnějších, zemitých barev – béžová, krémová, hnědá, olivová, vínová, tmavě zelená či zlatá krásně zapadnou k&nbsp;teplým světýlkům ve scéně. Nemusíte pořizovat nic speciálního, postačí sladit kousky, které už máte doma. A&nbsp;pokud sáhnete po bílé, černé, tmavě modré nebo stříbrné, vůbec nic se neděje – i&nbsp;tyto odstíny se dají dobře zkombinovat. Jen se zkuste vyhnout výrazným nápisům a&nbsp;křiklavým barvám, aby na fotkách nerušily.</p>
+        </div>
+
+        <!-- Wrapper: display:contents on desktop (images stay absolutely positioned),
+             flex row on mobile -->
+        <div class="inspirace-imgs">
+          <div class="vt-img-float" style="position:absolute;top:0;left:0;width:108px;height:108px;--rot:-4deg;animation-delay:0.2s;"><img src="Obrazky_Plivova/Vanoce_obleceni/001-3.webp" alt="Inspirace oblečením" loading="lazy"></div>
+          <div class="vt-img-float" style="position:absolute;top:122px;left:58px;width:68px;height:68px;--rot:2.5deg;animation-delay:1.0s;"><img src="Obrazky_Plivova/Vanoce_obleceni/002.webp" alt="Inspirace oblečením" loading="lazy"></div>
+          <div class="vt-img-float" style="position:absolute;bottom:0;left:18px;width:88px;height:88px;--rot:-1.5deg;animation-delay:0.6s;"><img src="Obrazky_Plivova/Vanoce_obleceni/004.webp" alt="Inspirace oblečením" loading="lazy"></div>
+          <div class="vt-img-float" style="position:absolute;top:0;right:18px;width:78px;height:78px;--rot:3deg;animation-delay:0.8s;"><img src="Obrazky_Plivova/Vanoce_obleceni/Family Outfit Inspiration, Family Photo Outfit Ideas, Winter Family Pictures.webp" alt="Inspirace oblečením" loading="lazy"></div>
+          <div class="vt-img-float" style="position:absolute;top:90px;right:5px;width:102px;height:102px;--rot:-2.5deg;animation-delay:0.4s;"><img src="Obrazky_Plivova/Vanoce_obleceni/003.webp" alt="Inspirace oblečením" loading="lazy"></div>
+          <div class="vt-img-float" style="position:absolute;bottom:0;right:48px;width:72px;height:72px;--rot:4deg;animation-delay:1.3s;"><img src="Obrazky_Plivova/Vanoce_obleceni/005.webp" alt="Inspirace oblečením" loading="lazy"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- K zapůjčení -->
+  <section aria-labelledby="zapujceni-h2" style="background:var(--c-bg-alt,#faf9f7);padding:var(--sp-10) 0;">
+    <div class="container">
+
+      <h2 id="zapujceni-h2" style="text-align:center;margin-bottom:var(--sp-3);">K&nbsp;zapůjčení v&nbsp;ateliéru</h2>
+      <p style="text-align:center;color:var(--c-text-muted);margin:0 auto var(--sp-8);max-width:560px;">Šaty, kalhoty a&nbsp;košile si můžete půjčit přímo na místě – není třeba nic speciálně shánět.</p>
+
+      <!-- Šaty -->
+      <h3 style="font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--c-text-muted);margin-bottom:var(--sp-4);">Šaty</h3>
+      <div class="gallery-grid" style="margin-bottom:var(--sp-4);">
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09129.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7146.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/1000031686.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_114013.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/1000031688.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/1000031689.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/1000031690.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09130.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+      </div>
+      <div id="saty-extra" style="display:none;margin-bottom:var(--sp-4);">
+        <div class="gallery-grid">
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/1000031691.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/140.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/152a6859-e982-47ab-9c88-02e6177a9657.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_114057.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_114129.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_114633.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_114739.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_114922.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_115125.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_115619.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/20250922_120211.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/2bb2e9fc-b73a-478e-a4a1-74b9866f506d.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/2f3d4f69-d9d8-4222-8b95-55aeaa482a2f.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/639c9583-8fd1-4a98-b534-021010f29423.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/7708219d-37c3-4392-bd35-52f64b02257f.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/7bac20f6-87de-41c6-96c8-dc90e7263172-3.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09132.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09134.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09136.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09139.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09140.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09141.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09145.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09148.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09150.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC09151.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7147.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7149.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7150.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7151.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7152.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7154.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7155.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7157.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7164.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7165.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7166.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7167.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7168-9.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/DSC_7169.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/a31dd7e6-9649-42e3-8275-51bd47e1d2f2.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/bb37ecab-f98d-4f36-9378-28cde1f34333-2.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/d2f31b1c-3769-4b49-925b-5253a4dc13a6.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/d352944c-47c3-4f0d-a508-defe23977835.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Saty/e9bee25a-828f-49ef-a851-e3325e600627.webp" alt="Šaty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-bottom:var(--sp-8);">
+        <button class="btn btn-ghost zapujceni-toggle" data-target="saty-extra" data-more="Zobrazit další šaty" data-less="Zobrazit méně">
+          Zobrazit další šaty <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- Kalhoty -->
+      <h3 style="font-size:1rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--c-text-muted);margin-bottom:var(--sp-4);">Kalhoty a košile</h3>
+      <div class="gallery-grid" style="margin-bottom:var(--sp-4);">
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_120457.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/44c9991a-8a4c-4ea8-a07d-f025cce48ef2.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/gatě.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/b69a3dad-94f4-4cae-af3d-e94432266d6a.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_120618.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_120658.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_120806.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_120842.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+      </div>
+      <div id="kalhoty-extra" style="display:none;margin-bottom:var(--sp-4);">
+        <div class="gallery-grid">
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_120914.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121045.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121134 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121214 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121302 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121351 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121645 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121805 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_121844 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_122025 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_122159 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_122306(1) - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_122347(1) - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_122457(1) - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+          <div class="gallery-item reveal"><img src="Obrazky_Plivova/Vanoce_obleceni/Kalhoty/20250922_123120 - kopie.webp" alt="Kalhoty k zapůjčení" loading="lazy"><div class="gallery-item-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></div></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-bottom:var(--sp-8);">
+        <button class="btn btn-ghost zapujceni-toggle" data-target="kalhoty-extra" data-more="Zobrazit další kalhoty a košile" data-less="Zobrazit méně">
+          Zobrazit další kalhoty a košile <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <!-- CTA -->
+  <section class="cta-section" aria-labelledby="cta-h2">
+    <div class="container">
+      <h2 id="cta-h2">Máte zájem o&nbsp;vánoční focení?</h2>
+      <p>Napište mi a&nbsp;domluvíme termín.</p>
+      <a href="/kontakt" class="btn">
+        Kontaktovat <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Patička -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="Obrazky_Plivova/Logo_Plivova.svg" alt="Logo Veronika Plívová" class="footer-logo">
+        <p>Profesionální fotografka z&nbsp;Lovosic. Ateliér i&nbsp;exteriér kdekoli dle vašeho přání.</p>
+        <img src="Obrazky_Plivova/Omne_Plivova/DSC_3257mala.webp" alt="Veronika Plívová" class="footer-portrait" loading="lazy">
+        <div class="footer-social">
+          <a href="https://facebook.com/photoplivova" class="footer-social-icon"
+             aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/photo_plivova/" class="footer-social-icon"
+             aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-heading">Kontakt</h3>
+        <address class="footer-links">
+          <span class="footer-link"><i class="fa-solid fa-user footer-contact-icon" aria-hidden="true"></i>Veronika Plívová</span>
+          <a href="https://maps.app.goo.gl/MpopxitPX6aHcJAa8" class="footer-link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot footer-contact-icon" aria-hidden="true"></i>Adresa&nbsp;ateliéru:&nbsp;Terezínská 1111, Lovosice</a>
+          <span class="footer-link" style="font-size:.8em;opacity:.6;"><i class="fa-solid fa-building footer-contact-icon" aria-hidden="true"></i>Sídlo: 410&nbsp;02, Lukavec&nbsp;7</span>
+          <a href="tel:+420608296398" class="footer-link"><i class="fa-solid fa-phone footer-contact-icon" aria-hidden="true"></i>+420&nbsp;608&nbsp;296&nbsp;398</a>
+          <a href="mailto:photoplivova@email.cz" class="footer-link"><i class="fa-solid fa-envelope footer-contact-icon" aria-hidden="true"></i>photoplivova@email.cz</a>
+          <span class="footer-link"><i class="fa-solid fa-hashtag footer-contact-icon" aria-hidden="true"></i>IČO: 76415147</span>
+          <span class="footer-link" style="font-size:.8em;opacity:.6;">Fyzická osoba zapsaná v&nbsp;živnostenském rejstříku</span>
+        </address>
+      </div>
+      <div>
+        <h3 class="footer-heading">Navigace</h3>
+        <nav class="footer-links" aria-label="Patičková navigace">
+          <a href="/portfolio" class="footer-link">Portfolio</a>
+          <a href="/cenik"     class="footer-link">Ceník</a>
+          <a href="/faq"       class="footer-link">FAQ</a>
+          <a href="/recenze"   class="footer-link">Recenze</a>
+          <a href="/o-mne"     class="footer-link">O&nbsp;mně</a>
+          <a href="/kontakt"   class="footer-link">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Veronika Plívová. Všechna práva vyhrazena.</p>
+      <div class="footer-legal">
+        <a href="/adr"     class="footer-link">Mimosoudní řešení sporů</a>
+        <a href="/cookies" class="footer-link">Zásady cookies</a>
+        <a href="/vop"     class="footer-link">Obchodní podmínky</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie lišta -->
+<div class="cookie-banner" id="cookie-banner" role="alertdialog" aria-label="Informace o&nbsp;cookies">
+  <p>Tento web používá technické soubory cookie nezbytné pro jeho fungování.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary" id="cookie-accept">Rozumím</button>
+    <button class="btn btn-ghost"   id="cookie-decline">Odmítnout</button>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Prohlížeč fotografií">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Zavřít">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <button class="lightbox-prev" id="lightbox-prev" aria-label="Předchozí fotografie">
+    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+  </button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-next" id="lightbox-next" aria-label="Další fotografie">
+    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+  </button>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  /* ---- Floating image lightbox ---- */
+  (function () {
+    var lb    = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    var prev  = document.getElementById('lightbox-prev');
+    var next  = document.getElementById('lightbox-next');
+    var close = document.getElementById('lightbox-close');
+    if (!lb || !lbImg) return;
+
+    var imgs = [], cur = 0;
+
+    function openAt(i) {
+      cur = (i + imgs.length) % imgs.length;
+      lbImg.src = imgs[cur].src;
+      lbImg.alt = imgs[cur].alt || '';
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLb() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.vt-img-float img').forEach(function (img) {
+      img.style.cursor = 'pointer';
+      img.parentElement.style.cursor = 'pointer';
+      img.addEventListener('click', function () {
+        imgs = Array.from(document.querySelectorAll('.vt-img-float img'));
+        openAt(imgs.indexOf(img));
+      });
+    });
+
+    prev  && prev.addEventListener('click',  function () { openAt(cur - 1); });
+    next  && next.addEventListener('click',  function () { openAt(cur + 1); });
+    close && close.addEventListener('click', closeLb);
+    lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLb();
+      if (e.key === 'ArrowLeft')  openAt(cur - 1);
+      if (e.key === 'ArrowRight') openAt(cur + 1);
+    });
+  })();
+
+  /* ---- Image cluster toggles ---- */
+  document.querySelectorAll('.vt-cluster-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(this.dataset.target);
+      if (!el) return;
+      var expanded = el.style.display === 'flex';
+      el.style.display = expanded ? 'none' : 'flex';
+      var icon = expanded ? 'fa-chevron-down' : 'fa-chevron-up';
+      var label = expanded ? (this.dataset.moreText || 'Zobrazit další') : (this.dataset.lessText || 'Zobrazit méně');
+      this.innerHTML = label + ' <i class="fa-solid ' + icon + '" aria-hidden="true"></i>';
+    });
+  });
+
+  document.getElementById('gallery-show-more')?.addEventListener('click', function () {
+    var extra = document.getElementById('gallery-extra');
+    var expanded = extra.style.display !== 'none';
+    extra.style.display = expanded ? 'none' : 'block';
+    this.innerHTML = expanded
+      ? 'Zobrazit více <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>'
+      : 'Zobrazit méně <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>';
+  });
+
+  /* ---- Zapůjčení show-more toggles ---- */
+  document.querySelectorAll('.zapujceni-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(this.dataset.target);
+      if (!el) return;
+      var expanded = el.style.display !== 'none';
+      el.style.display = expanded ? 'none' : 'block';
+      var moreLabel = this.dataset.more || 'Zobrazit další';
+      var lessLabel = this.dataset.less || 'Zobrazit méně';
+      var icon = expanded ? 'fa-chevron-down' : 'fa-chevron-up';
+      this.innerHTML = (expanded ? moreLabel : lessLabel) + ' <i class="fa-solid ' + icon + '" aria-hidden="true"></i>';
+    });
+  });
+
+  /* ---- Winding timeline path ---- */
+  (function () {
+    function drawPath() {
+      var sec     = document.querySelector('.vt-section');
+      var svg     = document.getElementById('vt-path-svg');
+      var pathEl  = document.getElementById('vt-path-line');
+      var dots    = Array.from(document.querySelectorAll('.vt-dot'));
+      if (!sec || !svg || !pathEl || !dots.length) return;
+
+      var W = sec.offsetWidth;
+      var H = sec.offsetHeight;
+      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+      svg.setAttribute('width',  W);
+      svg.setAttribute('height', H);
+
+      var secRect = sec.getBoundingClientRect();
+      var scrollY = window.pageYOffset;
+
+      var pts = dots.map(function (d) {
+        var r = d.getBoundingClientRect();
+        return {
+          x: r.left + r.width  / 2 - secRect.left,
+          y: r.top  + r.height / 2 + scrollY - (secRect.top + scrollY)
+        };
+      });
+
+      var amp = W * 0.38;   /* swing amplitude — 38 % of section width */
+      var cx  = W / 2;
+
+      /* Start: top center */
+      var d = 'M ' + cx + ' 0';
+
+      /* Curve down to first dot (swing right on the way) */
+      var p0 = pts[0];
+      d += ' C ' + (cx + amp) + ' ' + (p0.y * 0.4) +
+           ' '   + (p0.x + amp * 0.4) + ' ' + (p0.y * 0.8) +
+           ' '   + p0.x + ' ' + p0.y;
+
+      /* Between consecutive dots: wide S-swings */
+      for (var i = 1; i < pts.length; i++) {
+        var prev = pts[i - 1];
+        var curr = pts[i];
+        var side = (i % 2 === 0) ? 1 : -1;   /* alternate right / left */
+        var midY = (prev.y + curr.y) / 2;
+
+        d += ' C ' + (prev.x + amp * side) + ' ' + midY +
+             ' '   + (curr.x + amp * side) + ' ' + midY +
+             ' '   + curr.x + ' ' + curr.y;
+      }
+
+      /* Tail: bottom center */
+      var last     = pts[pts.length - 1];
+      var lastSide = (pts.length % 2 === 0) ? 1 : -1;
+      var tailMid  = last.y + (H - last.y) * 0.5;
+      d += ' C ' + (last.x + amp * lastSide * 0.5) + ' ' + tailMid +
+           ' '   + cx + ' ' + (H - 20) +
+           ' '   + cx + ' ' + H;
+
+      pathEl.setAttribute('d', d);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', drawPath);
+    } else {
+      drawPath();
+    }
+    window.addEventListener('resize', drawPath);
+  })();
+</script>
+</body>
+</html>

@@ -554,6 +554,14 @@ section { padding: var(--sp-10) 0; }
   text-align: left;
 }
 .pricing-features li i { color: var(--c-primary); flex-shrink: 0; margin-top: 3px; font-size: .875rem; }
+.pricing-features li > :not(i) { flex: 1; }
+.pricing-grid--flex > .pricing-card { flex: 0 0 100%; }
+@media (min-width: 640px) {
+  .pricing-grid--flex > .pricing-card { flex: 0 0 calc((100% - 24px) / 2); }
+}
+@media (min-width: 1024px) {
+  .pricing-grid--flex > .pricing-card { flex: 0 0 calc((100% - 48px) / 3); }
+}
 .pricing-note {
   margin-top: var(--sp-3);
   padding: var(--sp-3);
@@ -970,8 +978,8 @@ address.footer-links .footer-link { display: flex; align-items: center; }
 /* ════════════════════════════════════════════════════════════
    MEDIA QUERIES — desktop 1024px+
    ════════════════════════════════════════════════════════════ */
-@media (min-width: 1024px) {
-  /* Nav */
+/* Nav — tablet 768px+ */
+@media (min-width: 768px) {
   .nav-hamburger { display: none; }
   .nav-spacer { display: none; }
   .nav-links-left,
@@ -980,12 +988,17 @@ address.footer-links .footer-link { display: flex; align-items: center; }
   .nav-inner {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    gap: var(--sp-5);
+    gap: var(--sp-4);
     align-items: center;
   }
   .nav-logo { position: static; transform: none; }
   .nav-links-left { justify-content: flex-end; align-items: center; }
   .nav-links-right { justify-content: flex-start; align-items: center; }
+}
+
+@media (min-width: 1024px) {
+  /* Nav spacing increase on wider screens */
+  .nav-inner { gap: var(--sp-5); }
 
   /* Bento — mřížka 4×2 */
   .bento-grid {
