@@ -775,6 +775,8 @@ textarea.form-input { min-height: 140px; resize: vertical; }
   transition: var(--tr);
 }
 .footer-social-icon:hover { background: var(--c-primary); color: #fff; transform: translateY(-2px); }
+address.footer-links .footer-link { display: flex; align-items: center; }
+.footer-contact-icon { width: 14px; font-size: .75rem; line-height: 1; text-align: center; color: var(--c-primary); opacity: .8; margin-right: 8px; flex-shrink: 0; }
 .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,.08); margin-bottom: var(--sp-5); }
 .footer-bottom {
   display: flex;
